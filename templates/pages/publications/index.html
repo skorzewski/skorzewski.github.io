@@ -1,39 +1,10 @@
-<ul>
-    <li>
-        Paweł Skórzewski, Krzysztof Jassem, <em>Probabilistic Tree-generating Binary Grammars</em>, Poznań Studies in Contemporary Linguistics, vol. 50, Poznań 2014.
-        <a class="file" href="http://www.degruyter.com/view/j/psicl.ahead-of-print/psicl-2014-0007/psicl-2014-0007.xml">HTML</a>
-        <a class="file" href="skorzewski2014.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>Gobio and PSI-Toolkit: Adapting a deep parser to an NLP toolkit</em>, Proceedings of the 6th Language and Technology Conference, pp. 523-526, Poznań 2013.
-        <a class="file" href="ltc-083-skorzewski.pdf">PDF</a>
-        <a class="file" href="skorzewski2013.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>Obtaining PCFG probabilities based on the corpus</em>, Proceedings of the 5th Language and Technology Conference, pp. 411-414, Poznań 2011.
-        <a class="file" href="ltc-088-skorzewski.pdf">PDF</a>
-        <a class="file" href="skorzewski2011.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>An application of probabilistic grammars to efficient machine translation</em>, Investigationes Linguisticae, vol. 21, pp. 90-98, 2010.
-        <a class="file" href="http://inveling.amu.edu.pl/index.php?direct=226">HTML</a>
-        <a class="file" href="http://inveling.amu.edu.pl/pdf/skorzewski_inve21.pdf">PDF</a>
-        <a class="file" href="skorzewski2010b.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>Effective natural language parsing with probabilistic grammars</em>, Proceedings of the International Multiconference on Computer Science and Information Technology, vol. 5, pp. 501-504, Wisła 2010.
-        <a class="file" href="http://proceedings2010.imcsit.org/">HTML</a>
-        <a class="file" href="http://proceedings2010.imcsit.org/pliks/166.pdf">PDF</a>
-        <a class="file" href="skorzewski2010a.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>Gramatyki i automaty probabilistyczne</em>, praca magisterska, Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza, Poznań 2010. Promotor: Wojciech Buszkowski.
-        <a class="file" href="skorzewski_mgrm.pdf">PDF</a>
-        <a class="file" href="skorzewski2010m.bib">BIBTEX</a>
-    </li>
-    <li>
-        Paweł Skórzewski, <em>Efektywny parsing języka naturalnego przy użyciu gramatyk probabilistycznych</em>, praca magisterska, Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza, Poznań 2010. Promotor: Krzysztof Jassem.
-        <a class="file" href="skorzewski_mgri.pdf">PDF</a>
-        <a class="file" href="skorzewski2010i.bib">BIBTEX</a>
+<ul ng-controller="publicationsCtrl">
+    <li ng-repeat="publication in publications">
+        {{ publication.author }},
+        <em>{{ publication.title }}</em>,
+        {{ publication.journal }},
+        vol. {{ publication.volume }},
+        {{ publication.address }}
+        {{ publication.year }}.
     </li>
 </ul>
