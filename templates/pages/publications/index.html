@@ -1,10 +1,8 @@
 <ul ng-controller="publicationsCtrl">
     <li ng-repeat="publication in publications">
-        {{ publication.author }},
-        <em>{{ publication.title }}</em>,
-        {{ publication.journal }},
-        vol. {{ publication.volume }},
-        {{ publication.address }}
-        {{ publication.year }}.
+        <span ng-bind-html="publication.html()"></span>
     </li>
+    <!-- <li> -->
+    <!--     <span ng&#45;bind&#45;html="pub.html()"></span> -->
+    <!-- </li> -->
 </ul>
