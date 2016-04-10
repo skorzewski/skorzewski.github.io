@@ -12,9 +12,14 @@ app.controller('publicationsCtrl', function($scope, $sce) {
         this.bibtex = function() {
             if (this.data.type && this.data.id) {
                 var result = '@' + this.data.type + '{' + this.data.id + ',\n';
-                fields = ['author', 'title'];
+                fields = [
+                    'author',
+                    'title',
+                    'journal',
+                    'year',
+                    'volume',
+                ];
                 for (var i = 0; i < fields.length; i++) {
-                    result += fields[i] + '\n';
                     if (this.data[fields[i]]) {
                         result += '    ' + fields[i] + '={' + this.data[fields[i]] + '},\n';
                     }
@@ -44,7 +49,8 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             }
             var bibtex = this.bibtex();
             if (bibtex) {
-                result += ' <a title="' + bibtex + '"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>';
+                result += ' <a class="bibtex-button" title="BibTeX"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>';
+                result += ' <pre class="bibtex-content">' + bibtex + '</pre>';
             }
             return $sce.trustAsHtml(result);
         };
@@ -84,4 +90,11 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             pdf: 'http://inveling.amu.edu.pl/pdf/skorzewski_inve21.pdf',
         }),
     ];
+});
+
+$(document).ready(function() {
+    $(document).on('click', '.bibtex-button', function(event) {
+        event.stopPropagation();
+        $(this).closest('li').find('.bibtex-content').fadeToggle();
+    });
 });
