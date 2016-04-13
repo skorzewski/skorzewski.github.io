@@ -97,7 +97,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             pages: '523-526',
             address: 'Poznań',
             publisher: 'Fundacja UAM',
-            pdf: 'publications/skorzewski13.pdf',
+            pdf: 'resources/publications/skorzewski13.pdf',
         }),
         new Publication({
             type: 'inproceedings',
@@ -145,7 +145,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             year: '2010',
             address: 'Poznań',
             note: 'Promotor: Wojciech Buszkowski',
-            pdf: 'publications/skorzewski_mgrm.pdf',
+            pdf: 'resources/publications/skorzewski_mgrm.pdf',
         }),
         new Publication({
             type: 'masterthesis',
@@ -156,7 +156,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             year: '2010',
             address: 'Poznań',
             note: 'Promotor: Krzysztof Jassem',
-            pdf: 'publications/skorzewski_mgri.pdf',
+            pdf: 'resources/publications/skorzewski_mgri.pdf',
         }),
     ];
 });
