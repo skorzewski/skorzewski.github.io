@@ -41,6 +41,15 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             if (this.data.title) {
                 result += '<em>' + this.data.title + '</em>';
             }
+            if (this.data.address) {
+                result += ', ' + this.data.address;
+            }
+            if (this.data.year) {
+                if (!this.data.address) {
+                    result += ',';
+                }
+                result += ' ' + this.data.year;
+            }
             if (this.data.www) {
                 result += ' <a title="WWW" href="' + this.data.www + '"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a>';
             }
@@ -58,6 +67,16 @@ app.controller('publicationsCtrl', function($scope, $sce) {
 
     $scope.publications = [
         new Publication({
+            type: 'phdthesis',
+            id: 'skorzewski14i',
+            author: 'Paweł Skórzewski',
+            title: 'Wydajne algorytmy parsowania dla języków o szyku swobodnym',
+            school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
+            year: '2014',
+            address: 'Poznań',
+            note: 'Promotor: Krzysztof Jassem',
+        }),
+        new Publication({
             type: 'article',
             id: 'skorzewski14',
             title: 'Probabilistic Tree-generating Binary Grammars',
@@ -68,12 +87,27 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             address: 'Poznań',
         }),
         new Publication({
+            type: 'inproceedings',
+            id: 'skorzewski13',
             title: 'Gobio and PSI-Toolkit: Adapting a deep parser to an NLP toolkit',
             author: 'Paweł Skórzewski',
             booktitle: 'Proceedings of the 6th Language and Technology Conference',
             year: '2013',
-            editor: 'Zygmunt Vetulani and Hans Uszkoreit',
+            editor: 'Zygmunt Vetulani, Hans Uszkoreit',
             pages: '523-526',
+            address: 'Poznań',
+            publisher: 'Fundacja UAM',
+            pdf: 'publications/skorzewski13.pdf',
+        }),
+        new Publication({
+            type: 'inproceedings',
+            id: 'skorzewski11',
+            title: 'Obtaining PCFG probabilities based on the corpus',
+            author: 'Paweł Skórzewski',
+            booktitle: 'Proceedings of the 5th Language and Technology Conference',
+            year: '2011',
+            editor: 'Zygmunt Vetulani',
+            pages: '411-414',
             address: 'Poznań',
             publisher: 'Fundacja UAM',
         }),
@@ -88,6 +122,41 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             pages: '90-98',
             www: 'http://inveling.amu.edu.pl/index.php?direct=226',
             pdf: 'http://inveling.amu.edu.pl/pdf/skorzewski_inve21.pdf',
+        }),
+        new Publication({
+            type: 'inproceedings',
+            id: 'skorzewski10a',
+            title: 'Effective natural language parsing with probabilistic grammars',
+            author: 'Paweł Skórzewski',
+            booktitle: 'Proceedings of the International Multiconference on Computer Science and Information Technology',
+            year: '2010',
+            editor: 'Maria Ganzha, Marcin Paprzycki',
+            pages: '501-504',
+            address: 'Wisła',
+            publisher: 'Polskie Towarzystwo Informatyczne',
+            www: 'http://fedcsis.org/2010/pg/395/305'
+        }),
+        new Publication({
+            type: 'masterthesis',
+            id: 'skorzewski10m',
+            author: 'Paweł Skórzewski',
+            title: 'Gramatyki i automaty probabilistyczne',
+            school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
+            year: '2010',
+            address: 'Poznań',
+            note: 'Promotor: Wojciech Buszkowski',
+            pdf: 'publications/skorzewski_mgrm.pdf',
+        }),
+        new Publication({
+            type: 'masterthesis',
+            id: 'skorzewski10i',
+            author: 'Paweł Skórzewski',
+            title: 'Efektywny parsing języka naturalnego przy użyciu gramatyk probabilistycznych',
+            school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
+            year: '2010',
+            address: 'Poznań',
+            note: 'Promotor: Krzysztof Jassem',
+            pdf: 'publications/skorzewski_mgri.pdf',
         }),
     ];
 });
