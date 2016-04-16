@@ -15,9 +15,25 @@ app.controller('publicationsCtrl', function($scope, $sce) {
                 fields = [
                     'author',
                     'title',
+                    'booktitle',
                     'journal',
+                    'school',
                     'year',
+                    'editor',
                     'volume',
+                    'number',
+                    'series',
+                    'chapter',
+                    'pages',
+                    'address',
+                    'edition',
+                    'howpublished',
+                    'month',
+                    'organization',
+                    'institution',
+                    'publisher',
+                    'note',
+                    'key',
                 ];
                 for (var i = 0; i < fields.length; i++) {
                     if (this.data[fields[i]]) {
@@ -41,6 +57,33 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             if (this.data.title) {
                 result += '<em>' + this.data.title + '</em>';
             }
+            if (this.data.booktitle) {
+                result += ', ' + this.data.booktitle;
+            }
+            if (this.data.editor) {
+                result += ' (ed. ' + this.data.editor + ')';
+            }
+            if (this.data.journal) {
+                result += ', ' + this.data.journal;
+            }
+            if (this.data.volume) {
+                result += ', vol. ' + this.data.volume;
+            }
+            if (this.data.pages) {
+                result += ', pp. ' + this.data.pages;
+            }
+            if (this.data.type == 'phdthesis') {
+                result += ', praca doktorska';
+            }
+            if (this.data.type == 'masterthesis') {
+                result += ', praca magisterska';
+            }
+            if (this.data.school) {
+                result += ', ' + this.data.school;
+            }
+            if (this.data.edition) {
+                result += ', ed. ' + this.data.edition;
+            }
             if (this.data.address) {
                 result += ', ' + this.data.address;
             }
@@ -49,6 +92,9 @@ app.controller('publicationsCtrl', function($scope, $sce) {
                     result += ',';
                 }
                 result += ' ' + this.data.year;
+            }
+            if (this.data.note) {
+                result += ', ' + this.data.note;
             }
             if (this.data.www) {
                 result += ' <a title="WWW" href="' + this.data.www + '"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></a>';
@@ -74,7 +120,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
             year: '2014',
             address: 'Poznań',
-            note: 'Promotor: Krzysztof Jassem',
+            note: 'promotor: Krzysztof Jassem',
         }),
         new Publication({
             type: 'article',
@@ -144,7 +190,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
             year: '2010',
             address: 'Poznań',
-            note: 'Promotor: Wojciech Buszkowski',
+            note: 'promotor: Wojciech Buszkowski',
             pdf: 'resources/publications/skorzewski_mgrm.pdf',
         }),
         new Publication({
@@ -155,7 +201,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             school: 'Wydział Matematyki i Informatyki Uniwersytetu im. Adama Mickiewicza w Poznaniu',
             year: '2010',
             address: 'Poznań',
-            note: 'Promotor: Krzysztof Jassem',
+            note: 'promotor: Krzysztof Jassem',
             pdf: 'resources/publications/skorzewski_mgri.pdf',
         }),
     ];
