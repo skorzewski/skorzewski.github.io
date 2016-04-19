@@ -1,10 +1,19 @@
-var app = angular.module('SkorzewskiWebsite', ['ngRoute']);
+var app = angular.module('SkorzewskiWebsite', ['translate', 'ngRoute']);
 
 app.controller('navbarCtrl', function($scope, $location) {
     $scope.isActive = function(viewLocation) {
         return viewLocation === $location.path();
     };
-})
+});
+
+app.controller('languageCtrl', ['$scope', 'translateService', function($scope, translateService) {
+    $scope.setCurrentLanguage = function(language) {
+        translateService.setCurrentLanguage(language);
+    };
+    $scope.isCurrentLanguage = function(language) {
+        return language === translateService.getCurrentLanguage();
+    };
+}]);
 
 app.controller('publicationsCtrl', function($scope, $sce) {
     var Publication = function(data) {
