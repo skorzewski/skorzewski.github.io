@@ -56,7 +56,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             }
         };
         this.html = function() {
-            var result = '';
+            var result = '<span class="bibtexable">';
             if (this.data.author) {
                 result += this.data.author;
             }
@@ -116,6 +116,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
                 result += ' <a class="bibtex-button" title="BibTeX"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>';
                 result += ' <pre class="bibtex-content">' + bibtex + '</pre>';
             }
+            result += "</span>"
             return $sce.trustAsHtml(result);
         };
     };
@@ -214,11 +215,17 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             pdf: 'resources/publications/skorzewski_mgri.pdf',
         }),
     ];
+
+    all_bibliography = ""
+    for (var i = 0; i < $scope.publications.length; i++) {
+        all_bibliography += $scope.publications[i].bibtex()
+    }
+    $scope.publications_bibtex = $sce.trustAsHtml(all_bibliography);
 });
 
 $(document).ready(function() {
     $(document).on('click', '.bibtex-button', function(event) {
         event.stopPropagation();
-        $(this).closest('li').find('.bibtex-content').fadeToggle();
+        $(this).closest('.bibtexable').find('.bibtex-content').fadeToggle();
     });
 });

@@ -5,6 +5,7 @@ translate.factory('translateService', function() {
     var tables = {
         'en': {
             'Publikacje': 'Publications',
+            'Wykaz wszystkich publikacji w BibTeX-u': 'List of all publications in BibTeX',
             'Dydaktyka': 'Teaching',
             'Ekspert przetwarzania języka naturalnego': 'Natural Language Processing Expert',
             'Uniwersytet im. Adama Mickiewicza w Poznaniu': 'Adam Mickiewicz University in Poznań',
