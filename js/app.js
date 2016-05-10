@@ -123,6 +123,16 @@ app.controller('publicationsCtrl', function($scope, $sce) {
 
     $scope.publications = [
         new Publication({
+            type: 'article',
+            id: 'jassem15',
+            title: 'PSI-Toolkit - an extensible and tightly integrated set of NLP tools',
+            author: 'Krzysztof Jassem, Filip Graliński, Marcin Junczys-Dowmunt, Paweł Skórzewski, Roman Grundkiewicz, Marcin Walas, Rafał Jaworski, Tomasz Dwojak',
+            journal: 'Human Language Technologies as a Challenge for Computer Science and Linguistics',
+            pages: '280-282',
+            year: '2015',
+            publisher: 'Fundacja UAM',
+        }),
+        new Publication({
             type: 'phdthesis',
             id: 'skorzewski14i',
             author: 'Paweł Skórzewski',
