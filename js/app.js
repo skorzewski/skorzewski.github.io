@@ -58,7 +58,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
         this.html = function() {
             var result = '<span class="bibtexable">';
             if (this.data.author) {
-                result += this.data.author;
+                result += this.data.author.split(' and ').join(', ');
             }
             if (result != '') {
                 result += ', ';
@@ -123,10 +123,25 @@ app.controller('publicationsCtrl', function($scope, $sce) {
 
     $scope.publications = [
         new Publication({
+            type: 'inproceedings',
+            id: 'kubis17',
+            title: 'EUDAMU at SemEval-2017 Task 11: Action ranking and type matching for end-user development',
+            author: 'Marek Kubis and Paweł Skórzewski and Tomasz Ziętkiewicz',
+            booktitle: 'Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval-2017)',
+            year: '2017',
+            month: 'August',
+            pages: '1000-1004',
+            address: 'Vancouver',
+            publisher: 'Association for Computational Linguistics',
+            url: 'http://www.aclweb.org/anthology/S17-2175',
+            pdf: 'http://www.aclweb.org/anthology/S17-2175',
+            www: 'http://nlp.arizona.edu/SemEval-2017',
+        }),
+        new Publication({
             type: 'article',
             id: 'jassem15',
             title: 'PSI-Toolkit - an extensible and tightly integrated set of NLP tools',
-            author: 'Krzysztof Jassem, Filip Graliński, Marcin Junczys-Dowmunt, Paweł Skórzewski, Roman Grundkiewicz, Marcin Walas, Rafał Jaworski, Tomasz Dwojak',
+            author: 'Krzysztof Jassem and Filip Graliński and Marcin Junczys-Dowmunt and Paweł Skórzewski and Roman Grundkiewicz and Marcin Walas and Rafał Jaworski and Tomasz Dwojak',
             journal: 'Human Language Technologies as a Challenge for Computer Science and Linguistics',
             pages: '280-282',
             year: '2015',
@@ -146,7 +161,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             type: 'article',
             id: 'skorzewski14',
             title: 'Probabilistic Tree-generating Binary Grammars',
-            author: 'Paweł Skórzewski, Krzysztof Jassem',
+            author: 'Paweł Skórzewski and Krzysztof Jassem',
             journal: 'Poznań Studies in Contemporary Linguistics',
             year: '2014',
             volume: '50',
@@ -159,7 +174,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             author: 'Paweł Skórzewski',
             booktitle: 'Proceedings of the 6th Language and Technology Conference',
             year: '2013',
-            editor: 'Zygmunt Vetulani, Hans Uszkoreit',
+            editor: 'Zygmunt Vetulani and Hans Uszkoreit',
             pages: '523-526',
             address: 'Poznań',
             publisher: 'Fundacja UAM',
@@ -196,7 +211,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             author: 'Paweł Skórzewski',
             booktitle: 'Proceedings of the International Multiconference on Computer Science and Information Technology',
             year: '2010',
-            editor: 'Maria Ganzha, Marcin Paprzycki',
+            editor: 'Maria Ganzha and Marcin Paprzycki',
             pages: '501-504',
             address: 'Wisła',
             publisher: 'Polskie Towarzystwo Informatyczne',

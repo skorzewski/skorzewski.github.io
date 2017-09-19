@@ -11,6 +11,7 @@ translate.factory('translateService', function() {
             'Adiunkt': 'Assistant Professor',
             'Uniwersytet im. Adama Mickiewicza w Poznaniu': 'Adam Mickiewicz University in Poznań',
             'Wydział Matematyki i Informatyki': 'Faculty of Mathematics and Computer Science',
+            'Zakład Przetwarzania Języka Naturalnego': 'Department of Natural Language Processing',
             'Pracownia Systemów Informacyjnych': 'Information Systems Laboratoty',
             'Pokój': 'Room',
             'Dyżury': 'Office hours',
