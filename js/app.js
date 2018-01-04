@@ -123,6 +123,16 @@ app.controller('publicationsCtrl', function($scope, $sce) {
 
     $scope.publications = [
         new Publication({
+            type: 'article',
+            id: 'jassem17',
+            title: 'Processing historical texts with contemporary NLP tools',
+            author: 'Krzysztof Jassem and Paweł Skórzewski',
+            journal: 'Proceedings of the 8th Language and Technology Conference',
+            pages: '152-157',
+            year: '2017',
+            publisher: 'Fundacja UAM',
+        }),
+        new Publication({
             type: 'inproceedings',
             id: 'kubis17',
             title: 'EUDAMU at SemEval-2017 Task 11: Action ranking and type matching for end-user development',
