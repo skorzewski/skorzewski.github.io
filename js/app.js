@@ -131,6 +131,7 @@ app.controller('publicationsCtrl', function($scope, $sce) {
             pages: '152-157',
             year: '2017',
             publisher: 'Fundacja UAM',
+            pdf: 'http://ltc.amu.edu.pl/book/papers/LRT1-3.pdf',
         }),
         new Publication({
             type: 'inproceedings',
