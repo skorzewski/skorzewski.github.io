@@ -123,7 +123,28 @@ app.controller('publicationsCtrl', function($scope, $sce) {
 
     $scope.publications = [
         new Publication({
-            type: 'article',
+            type: 'inproceedings',
+            id: 'Skórzewski2019b',
+            title: 'Using book dialogs to extract emotions from texts in Polish',
+            author: 'Paweł Skórzewski',
+            journal: 'Proceedings of the 9th Language and Technology Conference',
+            address: 'Poznań',
+            year: '2019',
+            publisher: 'Wydawnictwo Nauka i Innowacje',
+            pdf: 'http://ltc.amu.edu.pl/book/papers/LRT1-3.pdf',
+        }),
+        new Publication({
+            type: 'inproceedings',
+            id: 'Skórzewski2019',
+            title: 'Noetic end-to-end response selection with supervised neural network based classifiers and unsupervised similarity models',
+            author: 'Paweł Skórzewski and Weronika Sieińska and Marek Kubis',
+            journal: 'Proceedings of the 7th Dialog System Technology Challenge (DSTC7)',
+            address: 'Honolulu',
+            year: '2019',
+            pdf: 'http://workshop.colips.org/dstc7/papers/21.pdf',
+        }),
+        new Publication({
+            type: 'inproceedings',
             id: 'jassem17',
             title: 'Processing historical texts with contemporary NLP tools',
             author: 'Krzysztof Jassem and Paweł Skórzewski',
