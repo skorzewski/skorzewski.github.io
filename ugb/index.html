@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Uczenie głębokie – Paweł Skórzewski</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Tinos&display=swap" rel="stylesheet">
+   <style>
+      body {
+         font-family: 'Rubik', sans-serif;
+      }
+
+      h1,
+      h2,
+      h3 {
+         font-family: 'Tinos', serif;
+      }
+
+      table {
+         border-collapse: collapse;
+      }
+
+      td,
+      th {
+         border: 1px solid #dddddd;
+         text-align: center;
+         padding: 5px;
+      }
+   </style>
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+   <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+      </script>
+</head>
+
+<body>
+   <h1>
+      Uczenie głębokie<br />
+      <small>Zajęcia laboratoryjne</small><br />
+      <small><small>Część 2. Uczenie głębokie w przetwarzaniu tekstu</small></small><br />
+   </h1>
+   <p>
+      <strong><a href="https://wmi.amu.edu.pl/wydzial/pracownicy/pracownik?id=304753">Paweł
+            Skórzewski</a></strong>
+   </p>
+   <p>
+      <a href="https://wmi.amu.edu.pl/wydzial/struktura-wydzialu/zaklad-sztucznej-inteligencji">Zakład Sztucznej
+         Inteligencji UAM</a>
+   </p>
+   <p>
+      Kontakt:
+   </p>
+   <ul>
+      <li>MS Teams</li>
+      <li>e-mail: <em>pawel.skorzewski@amu.edu.pl</em></li>
+   </ul>
+
+   <h2>Zasady zaliczenia</h2>
+   <p>Ocena z zajęć laboratoryjnych zostanie wystawiona na podstawie ocen z części 1. (przetwarzanie obrazu) i części 2.
+      (przetwarzanie tekstu).</p>
+
+   <p>Ocena z części 2. (przetwarzanie tekstu) będzie wystawiona na podstawie liczby zdobytych punktów, zgodnie z
+      poniższą tabelą:</p>
+
+   <table>
+      <tr>
+         <th>od</th>
+         <th>ocena</th>
+      </tr>
+      <tr>
+         <td>0%</td>
+         <td>2</td>
+      </tr>
+      <tr>
+         <td>50%</td>
+         <td>3</td>
+      </tr>
+      <tr>
+         <td>60%</td>
+         <td>3,5</td>
+      </tr>
+      <tr>
+         <td>70%</td>
+         <td>4</td>
+      </tr>
+      <tr>
+         <td>80%</td>
+         <td>4,5</td>
+      </tr>
+      <tr>
+         <td>90%</td>
+         <td>5</td>
+      </tr>
+   </table>
+
+   <p>
+      Punkty można zdobyć za rozwiązywanie zadań – wyzwań na platformie <a href="https://gonito.net">Gonito.net</a>. Za
+      każde zadanie można zdobyć od 0 do 100 punktów. Liczba punktów \(p\) za zadanie jset przydzielana według
+      następującego wzoru:
+      $$ p = \left\{ \begin{array}{ l l } \dfrac{ 1 }{ c } \cdot \left( 50 + \dfrac{ s - b }{ a - b } \cdot 50 \right) &
+      \mbox{ gdy } s > b \, , \\ 0 & \mbox{ w przeciwnym wypadku,} \end{array} \right. $$
+      gdzie:
+   <ul>
+      <li>\(s\) – wynik uzyskany przez studenta,</li>
+      <li>\(a\) – najlepszy spośród wyników uzyskanych przez wszystkich studentów,</li>
+      <li>\(b\) – baseline,</li>
+      <li>\(c\) – liczba rozwiązań, które uzyskały wynik równy dokładnie \(s\).</li>
+   </ul>
+   </p>
+
+
+   <h2>Lista zadań</h2>
+
+   <h3>Diachronia year prediction</h3>
+   <ul>
+      <li><a href="https://gonito.net/challenge/diachronia-year-prediction">Wyzwanie w serwisie Gonito.net</a></li>
+   </ul>
+
+   <h3>Conversational AI Correctness</h3>
+   <ul>
+      <li><a href="https://fedcsis.org/sessions/aaia/cnlps/caiccaic">Opis wyzwania</a></li>
+      <li><a href="https://gonito.net/challenge/cnlps-caiccaic">Wyzwanie w serwisie Gonito.net</a></li>
+      <li><a href="https://gonito.net/view-variant/8893">Baseline – wyniki</a></li>
+      <li>Baseline – przykładowy kod:
+         <ul>
+            <li>
+               <a href="https://github.com/cartesinus/leyzer/blob/master/experiments/xlr_intent_baseline.ipynb">model
+                  intentów</a>
+            </li>
+            <li>
+               <a href="https://github.com/cartesinus/leyzer/blob/master/experiments/xlr_slot_baseline.ipynb">model
+                  slotów</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
+
+   <h3>Temporal Image Caption Retrieval</h3>
+   <ul>
+      <li><a href="https://fedcsis.org/sessions/aaia/cnlps/ticrc">Opis wyzwania</a></li>
+      <li><a href="https://gonito.net/challenge/cnlps-ticrc">Wyzwanie w serwisie Gonito.net</a></li>
+   </ul>
+   </ol>
+</body>
+
+</html>
